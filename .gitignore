@@ -1,0 +1,6 @@
+Library/
+ProjectSettings/
+Assets/Scenes/EndGame.unity.meta
+Assets/Scenes/Gameplay.unity.meta
+Assets/Scenes/StartGame.unity.meta
+*.meta

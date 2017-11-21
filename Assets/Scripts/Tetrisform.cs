@@ -16,11 +16,12 @@ public class Tetrisform : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         CheckUserInput();
+        
 	}
 
     void CheckUserInput()
     {
-        if(!stopMoving) {
+        //if(!stopMoving) {
             if (Input.inputString != null) {
                 //Debug.Log("The key entered is " + Input.inputString.ToString());
             }
@@ -37,7 +38,7 @@ public class Tetrisform : MonoBehaviour {
             } else if (GoDown()) {
                 transform.position += new Vector3(0, -1, 0);
             }
-        }
+        //}
     }
 
     bool GoDown()
@@ -52,6 +53,7 @@ public class Tetrisform : MonoBehaviour {
         Debug.Log(collision.gameObject.name);
         if(!collision.gameObject.name.Equals("Left Wall") && !collision.gameObject.name.Equals("Right Wall") && collision.gameObject.transform.position.y < gameObject.transform.position.y) {
             stopMoving = true;
+            enabled = false;  
         }
     }
 
